@@ -1,0 +1,4 @@
+C:\Users\User\Desktop\Dropbox\Dropbox\ToDoReload\ToDoSrv\bin\Debug\ToDoSrv.exe
+C:\Users\User\Desktop\Dropbox\Dropbox\ToDoReload\ToDoSrv\bin\Debug\ToDoSrv.pdb
+C:\Users\User\Desktop\Dropbox\Dropbox\ToDoReload\ToDoSrv\obj\x86\Debug\ToDoSrv.exe
+C:\Users\User\Desktop\Dropbox\Dropbox\ToDoReload\ToDoSrv\obj\x86\Debug\ToDoSrv.pdb

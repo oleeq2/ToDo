@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoCli", "ToDoCli\ToDoCli.csproj", "{C723201B-47B1-44D5-8ED5-8DFD0944D70A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoLib", "ToDoLib\ToDoLib.csproj", "{9BAB10C9-AEB2-408B-A82B-313D83FF094E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoSrv", "ToDoSrv\ToDoSrv.csproj", "{5B3DAC6F-22DB-4C6A-9E0B-B2D363FFDB31}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C723201B-47B1-44D5-8ED5-8DFD0944D70A}.Debug|x86.ActiveCfg = Debug|x86
+		{C723201B-47B1-44D5-8ED5-8DFD0944D70A}.Debug|x86.Build.0 = Debug|x86
+		{C723201B-47B1-44D5-8ED5-8DFD0944D70A}.Release|x86.ActiveCfg = Release|x86
+		{C723201B-47B1-44D5-8ED5-8DFD0944D70A}.Release|x86.Build.0 = Release|x86
+		{9BAB10C9-AEB2-408B-A82B-313D83FF094E}.Debug|x86.ActiveCfg = Debug|x86
+		{9BAB10C9-AEB2-408B-A82B-313D83FF094E}.Debug|x86.Build.0 = Debug|x86
+		{9BAB10C9-AEB2-408B-A82B-313D83FF094E}.Release|x86.ActiveCfg = Release|x86
+		{9BAB10C9-AEB2-408B-A82B-313D83FF094E}.Release|x86.Build.0 = Release|x86
+		{5B3DAC6F-22DB-4C6A-9E0B-B2D363FFDB31}.Debug|x86.ActiveCfg = Debug|x86
+		{5B3DAC6F-22DB-4C6A-9E0B-B2D363FFDB31}.Debug|x86.Build.0 = Debug|x86
+		{5B3DAC6F-22DB-4C6A-9E0B-B2D363FFDB31}.Release|x86.ActiveCfg = Release|x86
+		{5B3DAC6F-22DB-4C6A-9E0B-B2D363FFDB31}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
