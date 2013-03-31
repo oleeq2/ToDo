@@ -21,6 +21,7 @@ namespace ToDoLib
 
         public ItemList(List<Item> _lst)
         {
+            list = new List<Item>();
             foreach (Item i in _lst)
                 list.Add(i);
         }
@@ -63,7 +64,6 @@ namespace ToDoLib
                 case FilterType.NameFilter:
                     {
                         ret = new ItemList(list.FindAll((Item itm) => key == itm.Title));
-                        Console.WriteLine("Hello");
                         break;
                     }
                 case FilterType.TagFilter:

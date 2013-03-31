@@ -47,5 +47,10 @@ namespace ToDoCli
             Request request = new Request(ItemAction.Add, _lst);
             request.SendPackage(_sck);
         }
+        public void Disconnect()
+        {
+            Request request = new Request(ItemAction.EmptyAction, null);
+            request.SendPackage(_sck);
+        }
     }
 }

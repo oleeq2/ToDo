@@ -98,7 +98,11 @@ namespace ToDoCli
                         }
                         break;
                     }
-                    case MenuSelect.Exit: break;
+                    case MenuSelect.Exit:
+                    {
+                        nb.Disconnect();
+                        break;
+                    }
                     default:
                     {
                             Console.WriteLine("No such command!");

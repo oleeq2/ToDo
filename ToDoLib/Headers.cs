@@ -7,9 +7,9 @@ namespace ToDoLib
 {
     public enum FilterType
     {
-        TagFilter         = 1,
-        NameFilter        = 2,
-        DescriptionFilter = 3,
+        TagFilter         = 3,
+        NameFilter        = 1,
+        DescriptionFilter = 2,
         LastItemFilter    = 4,
         All               = 5
     }
