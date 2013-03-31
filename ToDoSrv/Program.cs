@@ -51,6 +51,7 @@ namespace ToDoSrv
             int port;
             if (!int.TryParse(args[0], out port))
             {
+                Console.WriteLine("Wrong command line args");
                 return;
             }
             Program program = new Program(port);

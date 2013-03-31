@@ -63,6 +63,7 @@ namespace ToDoLib
                 case FilterType.NameFilter:
                     {
                         ret = new ItemList(list.FindAll((Item itm) => key == itm.Title));
+                        Console.WriteLine("Hello");
                         break;
                     }
                 case FilterType.TagFilter:

@@ -30,7 +30,7 @@ namespace ToDoCli
         {
             Request request = new Request(ItemAction.Search, type, key);
             request.SendPackage(_sck);
-            Response response = Response.ReceivePackage(_sck);
+            Response response = (Response)Response.ReceivePackage(_sck);
             return response.data;
         }
 
@@ -38,7 +38,7 @@ namespace ToDoCli
         {
             Request request = new Request(ItemAction.Search, FilterType.All, string.Empty);
             request.SendPackage(_sck);
-            Response response = Response.ReceivePackage(_sck);
+            Response response = (Response)Response.ReceivePackage(_sck);
             return response.data.GetEnumerator();
         }
 

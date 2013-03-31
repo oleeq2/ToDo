@@ -9,30 +9,45 @@ using System.Runtime.Serialization.Json;
 
 namespace ToDoLib
 {
+    [DataContract]
    public abstract class Package
    {
        public virtual void SendPackage(Socket sck)
        {
-           throw new NotImplementedException();
+           sck.Send(ToByte());
        }
-       public static virtual Package ReceivePackage(Socket sck)
+
+       public static byte[] ReceiveBytes(Socket sck)
        {
-           throw new NotImplementedException();
+           byte[] buff = new byte[512];
+           MemoryStream ms = new MemoryStream();
+           int counter=0;
+
+           do
+           {
+               int i = sck.Receive(buff);
+               ms.Write(buff, counter, i);
+               counter += i;
+           }while(buff[counter] != 0);
+
+           return ms.ToArray();
        }
-       abstract byte[] ToArray();
+
+       public abstract byte[] ToByte();
+
    }
 
    [DataContract]
    public class Request : Package
    {
        [DataMember]
-       public ItemList data     { public get; set; }
+       public ItemList data     {  get; private set; }
        [DataMember]
-       public ItemAction action { public get; set; }
+       public ItemAction action {  get; private set; }
        [DataMember]
-       public FilterType filter { public get; set; }
+       public FilterType filter {  get; private set; }
        [DataMember]
-       public string filter_key { public get; set; }
+       public string filter_key {  get; private set; }
 
        static DataContractJsonSerializer _serializer = new DataContractJsonSerializer(typeof(Request));
 
@@ -51,33 +66,37 @@ namespace ToDoLib
            this.filter_key = filter_key;
        }
 
-       byte[] ToByte()
+       public override byte[] ToByte()
        {
            MemoryStream ms = new MemoryStream();
            _serializer.WriteObject(ms, this);
            return ms.ToArray();
        }
 
-       public override void SendPackage(Socket sck)
+       static Request ToPackage(byte[] buffer)
        {
-           throw new NotImplementedException();
+           Request ret;
+           ret = (Request)_serializer.ReadObject(new MemoryStream(buffer));
+           return ret;
        }
 
-       public static override Request ReceivePackage(Socket sck)
+       public static Request ReceivePackage(Socket _sck)
        {
-           throw new NotImplementedException();
+           byte[] buff = Package.ReceiveBytes(_sck);
+           return Request.ToPackage(buff);
        }
+
    }
 
    [DataContract]
    public class Response: Package
    {
        [DataMember]
-       public Status status  { public get; set; }
+       public Status status  {  get; private set; }
        [DataMember]
-       public ItemList data  { public get; set; }
+       public ItemList data  {  get; private set; }
        [DataMember]
-       public string Message { public get; set; }
+       public string Message {  get; private set; }
 
        static DataContractJsonSerializer _serializer = new DataContractJsonSerializer(typeof(Response));
 
@@ -95,21 +114,24 @@ namespace ToDoLib
            this.Message = msg;
        }
 
-       byte[] ToByte()
+       public override byte[] ToByte()
        {
            MemoryStream ms = new MemoryStream();
            _serializer.WriteObject(ms, this);
            return ms.ToArray();
        }
 
-       public override void SendPackage(Socket sck)
+       static Response ToPackage(byte[] buffer)
        {
-           throw new NotImplementedException();
+           Response ret;
+           ret = (Response)_serializer.ReadObject(new MemoryStream(buffer));
+           return ret;
        }
 
-       public static override Response ReceivePackage(Socket sck)
+       public static Response ReceivePackage(Socket _sck)
        {
-           throw new NotImplementedException();
+           byte[] buff = Package.ReceiveBytes(_sck);
+           return Response.ToPackage(buff);
        }
    }
 }

@@ -1,0 +1,10 @@
+C:\Users\User\Desktop\Dropbox\Dropbox\ToDoReload\ToDoLib\obj\x86\Debug\ToDoLib.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\Dropbox\Dropbox\ToDoReload\ToDoLib\bin\Debug\ToDoLib.dll
+C:\Users\User\Desktop\Dropbox\Dropbox\ToDoReload\ToDoLib\bin\Debug\ToDoLib.pdb
+C:\Users\User\Desktop\Dropbox\Dropbox\ToDoReload\ToDoLib\obj\x86\Debug\ToDoLib.dll
+C:\Users\User\Desktop\Dropbox\Dropbox\ToDoReload\ToDoLib\obj\x86\Debug\ToDoLib.pdb
+C:\Users\User\Desktop\Dropbox\ToDoReload\ToDoLib\bin\Debug\ToDoLib.dll
+C:\Users\User\Desktop\Dropbox\ToDoReload\ToDoLib\bin\Debug\ToDoLib.pdb
+C:\Users\User\Desktop\Dropbox\ToDoReload\ToDoLib\obj\x86\Debug\ToDoLib.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\Dropbox\ToDoReload\ToDoLib\obj\x86\Debug\ToDoLib.dll
+C:\Users\User\Desktop\Dropbox\ToDoReload\ToDoLib\obj\x86\Debug\ToDoLib.pdb

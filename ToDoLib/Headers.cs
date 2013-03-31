@@ -16,6 +16,7 @@ namespace ToDoLib
 
     public enum ItemAction
     {
+        EmptyAction = 0,
         Add    = 1,
         Search = 2
     }

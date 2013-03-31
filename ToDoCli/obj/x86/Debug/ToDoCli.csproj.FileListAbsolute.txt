@@ -1,0 +1,14 @@
+C:\Users\User\Desktop\Dropbox\Dropbox\ToDoReload\ToDoCli\bin\Debug\ToDoCli.exe
+C:\Users\User\Desktop\Dropbox\Dropbox\ToDoReload\ToDoCli\bin\Debug\ToDoCli.pdb
+C:\Users\User\Desktop\Dropbox\Dropbox\ToDoReload\ToDoCli\bin\Debug\ToDoLib.dll
+C:\Users\User\Desktop\Dropbox\Dropbox\ToDoReload\ToDoCli\bin\Debug\ToDoLib.pdb
+C:\Users\User\Desktop\Dropbox\Dropbox\ToDoReload\ToDoCli\obj\x86\Debug\ToDoCli.exe
+C:\Users\User\Desktop\Dropbox\Dropbox\ToDoReload\ToDoCli\obj\x86\Debug\ToDoCli.pdb
+C:\Users\User\Desktop\Dropbox\Dropbox\ToDoReload\ToDoCli\obj\x86\Debug\ToDoCli.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\Dropbox\ToDoReload\ToDoCli\obj\x86\Debug\ToDoCli.exe
+C:\Users\User\Desktop\Dropbox\ToDoReload\ToDoCli\obj\x86\Debug\ToDoCli.pdb
+C:\Users\User\Desktop\Dropbox\ToDoReload\ToDoCli\obj\x86\Debug\ToDoCli.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\Dropbox\ToDoReload\ToDoCli\bin\Debug\ToDoCli.exe
+C:\Users\User\Desktop\Dropbox\ToDoReload\ToDoCli\bin\Debug\ToDoCli.pdb
+C:\Users\User\Desktop\Dropbox\ToDoReload\ToDoCli\bin\Debug\ToDoLib.dll
+C:\Users\User\Desktop\Dropbox\ToDoReload\ToDoCli\bin\Debug\ToDoLib.pdb
