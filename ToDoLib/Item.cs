@@ -4,17 +4,17 @@ using System.Runtime.Serialization;
 
 namespace ToDoLib
 {
-    [DataContract]
+   [DataContract]
     public class Item
     {
-        [DataMember]
+       [DataMember]
         string title;
-        [DataMember]
+       [DataMember]
         string descript;
-        [DataMember]
+       [DataMember]
         DateTime deadline;
-        [DataMember]
-        List<string> tags;
+       [DataMember]
+       List<string> tags;
 
         public Item(string title, string descript, DateTime deadline, List<string> tags)
         {

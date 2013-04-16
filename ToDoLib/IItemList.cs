@@ -1,11 +1,20 @@
 ﻿using System;
+using System.ServiceModel;
+using System.ServiceModel.Web;
+
 namespace ToDoLib
 {
+    [ServiceContract]
     public interface IItemList
     {
+        [OperationContract]
         void Add(Item itm);
-        ItemList Find(FilterType type, string key);
+        [OperationContract]
+        [WebGet(BodyStyle=WebMessageBodyStyle.Wrapped)]
+        IItemList Find(FilterType type, string key);
+        [OperationContract]
         System.Collections.Generic.IEnumerator<Item> GetEnumerator();
-        void mergeWith(ItemList _lst);
+        [OperationContract]
+        void mergeWith(IItemList _lst);
     }
 }

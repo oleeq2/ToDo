@@ -75,7 +75,7 @@ namespace ToDoLib
             }
         }
 
-        public ItemList CSVToProg()
+        public IItemList CSVToProg()
         {
             ItemList ret = new ItemList();
             //this	{todo_list.CSVPresent}	todo_list.CSVPresent

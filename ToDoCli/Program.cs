@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using ToDoLib;
+using ToDoCli.ItemProxy;
 
 namespace ToDoCli
 {
@@ -10,21 +11,10 @@ namespace ToDoCli
     {
         public static void Main(string []args)
         {
-            if(args.Length < 2)
-            {
-                Console.WriteLine("Too litle args");
-                return;
-            }
-            string ip = args[0];
-            int port;
-            if(!int.TryParse(args[1],out port))
-            {
-                Console.WriteLine("Error port format");
-                return;
-            }
+
             CSVPresent csvnb = new CSVPresent();
             ConsoleMenu menu = new ConsoleMenu();
-            RemoteList nb    = new RemoteList(ip, port);
+            ItemListClient nb = new ItemListClient();
             MenuSelect state;
             do
             {
@@ -49,7 +39,8 @@ namespace ToDoCli
                     {
                             FilterType searchT;
                             string match = menu.searchMenu(out searchT);
-                            ItemList res = nb.Find(searchT, match);
+                            IEnumerable<Item> res = (IEnumerable<Item>)nb.Find(searchT, match);
+                            
                             foreach (Item itm in res)
                                 Console.WriteLine(itm.ToString() + "\n");
                             break;
@@ -86,8 +77,8 @@ namespace ToDoCli
                             {
                                 try
                                 {
-                                    csvnb.ProgToCSV(nb);
-                                    csvnb.SaveToFile(path);
+                                //    csvnb.ProgToCSV((nb);
+                                 //   csvnb.SaveToFile(path);
                                 }
                                 catch (System.IO.IOException)
                                 {
@@ -100,7 +91,7 @@ namespace ToDoCli
                     }
                     case MenuSelect.Exit:
                     {
-                        nb.Disconnect();
+                   //     nb.Disconnect();
                         break;
                     }
                     default:

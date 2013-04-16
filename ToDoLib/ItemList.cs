@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Runtime.Serialization;
+using System.ServiceModel;
+
 
 namespace ToDoLib
 {
     [DataContract]
     public class ItemList: IEnumerable<Item>, ToDoLib.IItemList
     {
-        [DataMember]
+       [DataMember]
         List<Item> list;
         CSVPresent _csv;
 
@@ -18,7 +20,7 @@ namespace ToDoLib
         {
             list = new List<Item>();
         }
-
+        
         public ItemList(List<Item> _lst)
         {
             list = new List<Item>();
@@ -56,7 +58,7 @@ namespace ToDoLib
             return ret;
         }
 
-        public ItemList Find(FilterType type, string key)
+        public IItemList Find(FilterType type, string key)
         {
             ItemList ret;
             switch (type)
@@ -102,7 +104,7 @@ namespace ToDoLib
           
         }
 
-        public void mergeWith(ItemList _lst)
+        public void mergeWith(IItemList _lst)
         {
             foreach (Item itm in _lst)
             {
