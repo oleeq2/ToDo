@@ -10,7 +10,7 @@ namespace ToDoLib
         [OperationContract]
         void Add(Item itm);
         [OperationContract]
-        [WebGet(BodyStyle=WebMessageBodyStyle.Wrapped)]
+        [WebInvoke(BodyStyle=WebMessageBodyStyle.Wrapped)]
         IItemList Find(FilterType type, string key);
         [OperationContract]
         System.Collections.Generic.IEnumerator<Item> GetEnumerator();

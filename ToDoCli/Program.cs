@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using ToDoLib;
-using ToDoCli.ItemProxy;
+using ToDoCli.ItemListProxy;
+using System.ServiceModel;
 
 namespace ToDoCli
 {
