@@ -12,10 +12,9 @@ namespace ToDoSrv
     {
         static void Main(string[] args)
         {
-          
-         
-            ServiceHost host = new ServiceHost(typeof(ItemList));
 
+
+            ServiceHost host = new ServiceHost(typeof(ItemList));
             try
             {
                 

@@ -9,7 +9,7 @@ using System.ServiceModel;
 namespace ToDoLib
 {
     [DataContract]
-    public class ItemList: IEnumerable<Item>, ToDoLib.IItemList
+    public class ItemList: IEnumerable<Item>,ToDoLib.IItemList
     {
        [DataMember]
         List<Item> list;
@@ -58,7 +58,7 @@ namespace ToDoLib
             return ret;
         }
 
-        public IItemList Find(FilterType type, string key)
+        public ItemList Find(FilterType type, string key)
         {
             ItemList ret;
             switch (type)
@@ -104,6 +104,10 @@ namespace ToDoLib
           
         }
 
+        public List<Item> ToList()
+        {
+            return new List<Item>(list);
+        }
         public void mergeWith(IItemList _lst)
         {
             foreach (Item itm in _lst)

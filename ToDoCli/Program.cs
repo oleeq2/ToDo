@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using ToDoLib;
-using ToDoCli.ItemListProxy;
 using System.ServiceModel;
+using ToDoCli.ToDoItemProxy;
 
 namespace ToDoCli
 {
@@ -40,8 +40,8 @@ namespace ToDoCli
                     {
                             FilterType searchT;
                             string match = menu.searchMenu(out searchT);
-                            IEnumerable<Item> res = (IEnumerable<Item>)nb.Find(searchT, match);
-                            
+                            ItemList res = nb.Find(searchT, match);
+                                
                             foreach (Item itm in res)
                                 Console.WriteLine(itm.ToString() + "\n");
                             break;
