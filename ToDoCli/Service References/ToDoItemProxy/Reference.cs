@@ -7,7 +7,7 @@
 //     повторной генерации кода.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
+using System.ServiceModel.Web;
 namespace ToDoCli.ToDoItemProxy {
     
     
@@ -16,9 +16,11 @@ namespace ToDoCli.ToDoItemProxy {
     public interface IItemList {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IItemList/Add", ReplyAction="http://tempuri.org/IItemList/AddResponse")]
+        [WebInvoke(RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
         void Add(ToDoLib.Item itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IItemList/Find", ReplyAction="http://tempuri.org/IItemList/FindResponse")]
+        [WebInvoke(BodyStyle=WebMessageBodyStyle.Wrapped,RequestFormat=WebMessageFormat.Json,ResponseFormat=WebMessageFormat.Json)]
         ToDoLib.ItemList Find(ToDoLib.FilterType type, string key);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IItemList/GetEnumerator", ReplyAction="http://tempuri.org/IItemList/GetEnumeratorResponse")]
@@ -27,6 +29,7 @@ namespace ToDoCli.ToDoItemProxy {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ToDoLib.ItemList))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ToDoLib.Item[]))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(string[]))]
+        [WebInvoke(RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
         object GetEnumerator();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IItemList/mergeWith", ReplyAction="http://tempuri.org/IItemList/mergeWithResponse")]
@@ -35,6 +38,7 @@ namespace ToDoCli.ToDoItemProxy {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ToDoLib.ItemList))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ToDoLib.Item[]))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(string[]))]
+        [WebInvoke(RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
         void mergeWith(object _lst);
     }
     

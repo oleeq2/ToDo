@@ -20,3 +20,11 @@ C:\Users\User\Desktop\Dropbox\ToDo\ToDoSrv\bin\Debug\ToDoSrv.pdb
 C:\Users\User\Desktop\Dropbox\ToDo\ToDoSrv\bin\Debug\ToDoLib.dll
 C:\Users\User\Desktop\Dropbox\ToDo\ToDoSrv\bin\Debug\ToDoLib.pdb
 C:\Users\User\Desktop\Dropbox\ToDo\ToDoSrv\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\User\Desktop\ToDo\ToDoSrv\bin\Debug\ToDoSrv.exe.config
+C:\Users\User\Desktop\ToDo\ToDoSrv\bin\Debug\ToDoSrv.exe
+C:\Users\User\Desktop\ToDo\ToDoSrv\bin\Debug\ToDoSrv.pdb
+C:\Users\User\Desktop\ToDo\ToDoSrv\bin\Debug\ToDoLib.dll
+C:\Users\User\Desktop\ToDo\ToDoSrv\bin\Debug\ToDoLib.pdb
+C:\Users\User\Desktop\ToDo\ToDoSrv\obj\x86\Debug\ToDoSrv.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\ToDo\ToDoSrv\obj\x86\Debug\ToDoSrv.exe
+C:\Users\User\Desktop\ToDo\ToDoSrv\obj\x86\Debug\ToDoSrv.pdb

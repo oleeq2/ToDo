@@ -13,3 +13,7 @@ C:\Users\User\Desktop\Dropbox\ToDo\ToDoLib\obj\x86\Debug\ToDoLib.pdb
 C:\Users\User\Desktop\Dropbox\ToDo\ToDoLib\bin\Debug\ToDoLib.dll
 C:\Users\User\Desktop\Dropbox\ToDo\ToDoLib\bin\Debug\ToDoLib.pdb
 C:\Users\User\Desktop\Dropbox\ToDo\ToDoLib\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\User\Desktop\ToDo\ToDoLib\bin\Debug\ToDoLib.dll
+C:\Users\User\Desktop\ToDo\ToDoLib\bin\Debug\ToDoLib.pdb
+C:\Users\User\Desktop\ToDo\ToDoLib\obj\x86\Debug\ToDoLib.dll
+C:\Users\User\Desktop\ToDo\ToDoLib\obj\x86\Debug\ToDoLib.pdb
