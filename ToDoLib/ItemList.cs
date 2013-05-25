@@ -8,6 +8,7 @@ using System.ServiceModel;
 
 namespace ToDoLib
 {
+    [ServiceBehavior(InstanceContextMode=InstanceContextMode.Single)]
     [DataContract]
     public class ItemList: IEnumerable<Item>,ToDoLib.IItemList
     {
