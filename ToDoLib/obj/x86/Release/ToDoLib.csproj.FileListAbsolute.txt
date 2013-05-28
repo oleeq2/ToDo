@@ -1,0 +1,4 @@
+C:\Users\User\Desktop\ToDo\ToDoLib\bin\Release\ToDoLib.dll
+C:\Users\User\Desktop\ToDo\ToDoLib\bin\Release\ToDoLib.pdb
+C:\Users\User\Desktop\ToDo\ToDoLib\obj\x86\Release\ToDoLib.dll
+C:\Users\User\Desktop\ToDo\ToDoLib\obj\x86\Release\ToDoLib.pdb

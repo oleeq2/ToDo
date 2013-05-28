@@ -1,0 +1,8 @@
+C:\Users\User\Desktop\ToDo\ToDoCli\bin\Release\ToDoCli.exe.config
+C:\Users\User\Desktop\ToDo\ToDoCli\bin\Release\ToDoCli.exe
+C:\Users\User\Desktop\ToDo\ToDoCli\bin\Release\ToDoCli.pdb
+C:\Users\User\Desktop\ToDo\ToDoCli\bin\Release\ToDoLib.dll
+C:\Users\User\Desktop\ToDo\ToDoCli\bin\Release\ToDoLib.pdb
+C:\Users\User\Desktop\ToDo\ToDoCli\obj\x86\Release\ToDoCli.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\ToDo\ToDoCli\obj\x86\Release\ToDoCli.exe
+C:\Users\User\Desktop\ToDo\ToDoCli\obj\x86\Release\ToDoCli.pdb

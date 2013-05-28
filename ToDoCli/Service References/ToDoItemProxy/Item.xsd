@@ -41,6 +41,7 @@
   <xs:element name="FilterType" nillable="true" type="tns:FilterType" />
   <xs:complexType name="ItemList">
     <xs:sequence>
+      <xs:element minOccurs="0" name="List" nillable="true" type="tns:ArrayOfItem" />
       <xs:element minOccurs="0" name="list" nillable="true" type="tns:ArrayOfItem" />
     </xs:sequence>
   </xs:complexType>

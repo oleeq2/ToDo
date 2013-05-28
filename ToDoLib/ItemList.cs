@@ -4,19 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Runtime.Serialization;
 using System.ServiceModel;
-
+using System.ComponentModel;
 
 namespace ToDoLib
 {
-    [ServiceBehavior(InstanceContextMode=InstanceContextMode.Single)]
+    [ServiceBehavior(InstanceContextMode=InstanceContextMode.Single)] // OLOLO
     [DataContract]
     public class ItemList: IEnumerable<Item>,ToDoLib.IItemList
     {
        [DataMember]
         List<Item> list;
-        CSVPresent _csv;
+       //CSVPresent _csv;
+
+        public List<Item> List
+        {
+            get
+            {
+                List<Item> ret = null;
+                if (list != null)
+                    ret = new List<Item>(list);
+                return ret;
+            }
+        }
 
         public int Count { get { return list.Count; } }
+
         public ItemList()
         {
             list = new List<Item>();
@@ -102,19 +114,19 @@ namespace ToDoLib
         { 
             int index = list.BinarySearch(itm, comparer);
             list.Insert(index < 0 ? ~index : index, itm);
-          
+           
         }
 
-        public List<Item> ToList()
-        {
-            return new List<Item>(list);
-        }
+ 
+
         public void mergeWith(IItemList _lst)
         {
-            foreach (Item itm in _lst)
+            
+            foreach (Item itm in (ItemList)_lst)
             {
                 this.Add(itm);
             }
+  
         }
 
         public IEnumerator<Item> GetEnumerator()
@@ -127,5 +139,7 @@ namespace ToDoLib
             return this.GetEnumerator();
         }
 
+       
+        
     }
 }

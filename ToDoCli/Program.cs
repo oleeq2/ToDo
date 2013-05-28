@@ -13,7 +13,7 @@ namespace ToDoCli
         public static void Main(string []args)
         {
 
-            CSVPresent csvnb = new CSVPresent();
+            //CSVPresent csvnb = new CSVPresent();
             ConsoleMenu menu = new ConsoleMenu();
             ItemListClient nb = new ItemListClient();
             MenuSelect state;
@@ -61,8 +61,8 @@ namespace ToDoCli
                             {
                                 try
                                 {
-                                    csvnb.ReadFromFile(path);
-                                    nb.mergeWith(csvnb.CSVToProg());
+                              //    csvnb.ReadFromFile(path);
+                              //    nb.mergeWith(csvnb.CSVToProg());
                                 }
                                 catch (System.IO.IOException)
                                 {

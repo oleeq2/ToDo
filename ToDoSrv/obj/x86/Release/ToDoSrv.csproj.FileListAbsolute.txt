@@ -1,0 +1,8 @@
+C:\Users\User\Desktop\ToDo\ToDoSrv\bin\Release\ToDoSrv.exe.config
+C:\Users\User\Desktop\ToDo\ToDoSrv\bin\Release\ToDoSrv.exe
+C:\Users\User\Desktop\ToDo\ToDoSrv\bin\Release\ToDoSrv.pdb
+C:\Users\User\Desktop\ToDo\ToDoSrv\bin\Release\ToDoLib.dll
+C:\Users\User\Desktop\ToDo\ToDoSrv\bin\Release\ToDoLib.pdb
+C:\Users\User\Desktop\ToDo\ToDoSrv\obj\x86\Release\ToDoSrv.exe
+C:\Users\User\Desktop\ToDo\ToDoSrv\obj\x86\Release\ToDoSrv.pdb
+C:\Users\User\Desktop\ToDo\ToDoSrv\obj\x86\Release\ToDoSrv.csprojResolveAssemblyReference.cache

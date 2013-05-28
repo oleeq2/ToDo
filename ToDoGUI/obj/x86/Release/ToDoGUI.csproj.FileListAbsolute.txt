@@ -1,0 +1,17 @@
+C:\Users\User\Desktop\ToDo\ToDoGUI\bin\Release\ToDoGUI.exe.config
+C:\Users\User\Desktop\ToDo\ToDoGUI\bin\Release\ToDoGUI.exe
+C:\Users\User\Desktop\ToDo\ToDoGUI\bin\Release\ToDoGUI.pdb
+C:\Users\User\Desktop\ToDo\ToDoGUI\obj\x86\Release\InitialWindow.baml
+C:\Users\User\Desktop\ToDo\ToDoGUI\obj\x86\Release\MainWindow.baml
+C:\Users\User\Desktop\ToDo\ToDoGUI\obj\x86\Release\InitialWindow.g.cs
+C:\Users\User\Desktop\ToDo\ToDoGUI\obj\x86\Release\MainWindow.g.cs
+C:\Users\User\Desktop\ToDo\ToDoGUI\obj\x86\Release\App.g.cs
+C:\Users\User\Desktop\ToDo\ToDoGUI\obj\x86\Release\ToDoGUI_MarkupCompile.cache
+C:\Users\User\Desktop\ToDo\ToDoGUI\obj\x86\Release\ToDoGUI.g.resources
+C:\Users\User\Desktop\ToDo\ToDoGUI\obj\x86\Release\ToDoGUI.Properties.Resources.resources
+C:\Users\User\Desktop\ToDo\ToDoGUI\obj\x86\Release\ToDoGUI.csproj.GenerateResource.Cache
+C:\Users\User\Desktop\ToDo\ToDoGUI\obj\x86\Release\ToDoGUI.exe
+C:\Users\User\Desktop\ToDo\ToDoGUI\obj\x86\Release\ToDoGUI.pdb
+C:\Users\User\Desktop\ToDo\ToDoGUI\bin\Release\ToDoLib.dll
+C:\Users\User\Desktop\ToDo\ToDoGUI\bin\Release\ToDoLib.pdb
+C:\Users\User\Desktop\ToDo\ToDoGUI\obj\x86\Release\ToDoGUI.csprojResolveAssemblyReference.cache

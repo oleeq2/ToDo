@@ -2,6 +2,7 @@
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace ToDoLib
 {
@@ -16,11 +17,6 @@ namespace ToDoLib
         ItemList Find(FilterType type, string key);
         [OperationContract]
         [WebInvoke(RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
-        System.Collections.Generic.IEnumerator<Item> GetEnumerator();
-        [OperationContract]
-        [WebInvoke(RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
         void mergeWith(IItemList _lst);
-        [OperationContract]
-        List<Item> ToList();
     }
 }
