@@ -8,7 +8,7 @@ using System.ComponentModel;
 
 namespace ToDoLib
 {
-    [ServiceBehavior(InstanceContextMode=InstanceContextMode.Single)] // OLOLO
+    [ServiceBehavior(InstanceContextMode=InstanceContextMode.Single)]
     [DataContract]
     public class ItemList: IEnumerable<Item>,ToDoLib.IItemList
     {
@@ -46,14 +46,6 @@ namespace ToDoLib
             comparer = new ItemComparer();
             _empty = new List<Item>();
             _emptyItemList = new ItemList();
-        }
-
-        class ItemComparer : IComparer<Item>
-        {
-            public int Compare(Item x, Item y)
-            {
-                return x.DeadLine.CompareTo(y.DeadLine);
-            }
         }
 
         static ItemComparer comparer;
@@ -142,4 +134,15 @@ namespace ToDoLib
        
         
     }
+
+
+    class ItemComparer : IComparer<Item>
+    {
+        public int Compare(Item x, Item y)
+        {
+            return x.DeadLine.CompareTo(y.DeadLine);
+        }
+    }
+
+        
 }

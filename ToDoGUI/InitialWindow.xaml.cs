@@ -18,9 +18,7 @@ namespace ToDoGUI
     /// </summary>
     public partial class InitialWindow : Window
     {
-
-
-
+        
         public string Addr
         {
             get { return (string)GetValue(AddrProperty); }
@@ -34,19 +32,51 @@ namespace ToDoGUI
         
         public InitialWindow()
         {
-            //this.DataContext = this;
+            this.DataContext = this;
             InitializeComponent();
         }
 
         private void OkButton_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow win = new MainWindow(Addr);
-            win.Show();
-            this.Close();
+            GetMainWindow();
         }
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
+            this.Close();
+        }
+
+        private void Window_PreviewKeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                e.Handled = true;
+                GetMainWindow();
+            }
+            if (e.Key == Key.Escape)
+            {
+                e.Handled = true;
+                this.Close();
+            }
+        }
+
+        void GetMainWindow()
+        {
+            ItemListClient cli;
+            try
+            {
+                cli = new ItemListClient(Addr);
+                CreateMainWindow(cli);
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Таки там никого нет");
+            }
+        }
+        void CreateMainWindow(ItemListClient cli)
+        {
+            MainWindow win = new MainWindow(cli);
+            win.Show();
             this.Close();
         }
     }

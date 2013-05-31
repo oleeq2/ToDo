@@ -18,24 +18,33 @@ namespace ToDoGUI
     {
 
 
-        public ItemListWrapper List
+
+        public ViewModel.ToDoListView List
         {
-            get { return (ItemListWrapper)GetValue(ListProperty); }
+            get { return (ViewModel.ToDoListView)GetValue(ListProperty); }
             set { SetValue(ListProperty, value); }
         }
 
         // Using a DependencyProperty as the backing store for List.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty ListProperty =
-            DependencyProperty.Register("List", typeof(ItemListWrapper), typeof(MainWindow), new UIPropertyMetadata(null));
+            DependencyProperty.Register("List", typeof(ViewModel.ToDoListView), typeof(MainWindow), new UIPropertyMetadata(null));
 
+        
 
-
-        public MainWindow(string addr)
+        public MainWindow(ItemListClient cli)
         {
+            List = new ViewModel.ToDoListView(cli);
             this.DataContext = this;
             InitializeComponent();
-            List = new ItemListWrapper();
-            List.Add(new Item("title","",DateTime.Now,new List<string>()));
+            List<string> tags = new List<string>();
+            tags.Add("Еда после шести");
+            tags.Add("Рыжие девушки");
+            List.Add(new Item("title",DateTime.Now.ToString(),DateTime.Now,tags));
         }
+
+        private void MenuAdd(object sender, RoutedEventArgs e)
+        {
+        }
+
     }
 }

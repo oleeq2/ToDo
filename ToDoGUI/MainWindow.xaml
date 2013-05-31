@@ -3,19 +3,45 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="300" Width="300">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
-            <RowDefinition />
-        </Grid.RowDefinitions>
-        <Menu Grid.Row="0">
-            
-        </Menu>
-        <ListBox ItemsSource="{Binding Path=nb}">
+        <ListBox ItemsSource="{Binding Path=List}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Text="{Binding Path=Title}" />
-                    </StackPanel>
+                    <Expander>
+                        <Expander.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Add" Click="MenuAdd"/>
+                            </ContextMenu>
+                        </Expander.ContextMenu>
+                        <Expander.Header>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto" />
+                                    <ColumnDefinition Width="5" />
+                                    <ColumnDefinition Width="auto" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{Binding Item.Title}"    TextAlignment="Left"  Grid.Column="0"/>
+                                <TextBlock Text="{Binding Item.DeadLine}" TextAlignment="Right" Grid.Column="2"/>
+                            </Grid>
+                        </Expander.Header>
+                        <Expander.Content>
+                            <StackPanel     Orientation="Vertical" >
+                                <StackPanel Orientation="Horizontal" >
+                                    <TextBlock Text="Description: " />
+                                    <TextBlock Text="{Binding Item.Description}" />
+                                </StackPanel>
+                                <TextBlock  Text="Tags:"              HorizontalAlignment="Left" />
+                                <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right" >
+                                    <ItemsControl ItemsSource="{Binding Item.Tags}" >
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock TextAlignment="Right"  Text="{Binding}" />
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </StackPanel>
+                            </StackPanel>
+                        </Expander.Content>
+                    </Expander>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>

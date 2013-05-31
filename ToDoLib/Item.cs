@@ -5,28 +5,28 @@ using System.ComponentModel;
 
 namespace ToDoLib
 {
-   [DataContract]
-    public class Item: INotifyPropertyChanged 
+    [DataContract]
+    public class Item : INotifyPropertyChanged
     {
-       [DataMember]
+        [DataMember]
         string title;
-       [DataMember]
+        [DataMember]
         string descript;
-       [DataMember]
+        [DataMember]
         DateTime deadline;
-       [DataMember]
-       List<string> tags;
+        [DataMember]
+        List<string> tags;
 
-       public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
 
-       public Item(string title, string descript, DateTime deadline, List<string> tags)
-       {
+        public Item(string title, string descript, DateTime deadline, List<string> tags)
+        {
             // TODO: Complete member initialization
             this.title = title;
             this.descript = descript;
             this.deadline = deadline;
             this.tags = new List<string>(tags);
-       }
+        }
 
         public override string ToString()
         {
@@ -36,7 +36,8 @@ namespace ToDoLib
                 "\n Tags: " + string.Join(",", this.tags) + "\n";
         }
 
-        public string Title {
+        public string Title
+        {
             get { return title; }
             set
             {
@@ -45,23 +46,27 @@ namespace ToDoLib
             }
         }
 
-        public string Description { 
+        public string Description
+        {
             get { return descript; }
-             set
+            set
             {
                 descript = value;
                 OnPropertyChanged("Description");
             }
         }
 
-        public DateTime DeadLine {
+        public DateTime DeadLine
+        {
             get { return deadline; }
 
         }
 
-        public List<string> Tags { 
+        public List<string> Tags
+        {
             get { return tags; }
-             set {
+            set
+            {
                 tags = value;
                 OnPropertyChanged("Tags");
             }

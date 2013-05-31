@@ -67,15 +67,11 @@
     <Compile Include="InitialWindow.xaml.cs">
       <DependentUpon>InitialWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ItemListWrapper.cs" />
+    <Compile Include="ItemListClient.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Service References\ItemListProxy\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
+    <Compile Include="ViewModel\ToDoListView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -102,19 +98,6 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="Service References\ItemListProxy\Item.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ItemListProxy\Item1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ItemListProxy\Item2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ItemListProxy\Item3.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ItemListProxy\ItemList.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -140,21 +123,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Service References\ItemListProxy\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ItemListProxy\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ItemListProxy\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ItemListProxy\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
