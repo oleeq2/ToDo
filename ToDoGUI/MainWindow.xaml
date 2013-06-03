@@ -3,6 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="300" Width="300">
     <Grid>
+        <Grid.ContextMenu>
+            <ContextMenu>
+                <MenuItem Header="Add" Click="MenuAdd"/>
+            </ContextMenu>
+        </Grid.ContextMenu>
         <ListBox ItemsSource="{Binding Path=List}">
             <ListBox.ItemTemplate>
                 <DataTemplate>

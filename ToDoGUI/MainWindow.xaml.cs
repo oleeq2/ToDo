@@ -36,14 +36,12 @@ namespace ToDoGUI
             List = new ViewModel.ToDoListView(cli);
             this.DataContext = this;
             InitializeComponent();
-            List<string> tags = new List<string>();
-            tags.Add("Еда после шести");
-            tags.Add("Рыжие девушки");
-            List.Add(new Item("title",DateTime.Now.ToString(),DateTime.Now,tags));
         }
 
         private void MenuAdd(object sender, RoutedEventArgs e)
         {
+            AddTask win = new AddTask(List);
+            win.Show();
         }
 
     }
